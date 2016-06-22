@@ -1,0 +1,65 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "framework": {
+                "parents": {
+                    "CoreBluetooth.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "AudioToolbox.framework": []
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"BLE\"><param name=\"ios-package\" onload=\"true\" value=\"BLECentralPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "NSLocationWhenInUseUsageDescription": [
+                        {
+                            "xml": "<string />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-ble-central": {
+            "PACKAGE_NAME": "io.cordova.myappc39fa1"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "io.cordova.myappc39fa1"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.myappc39fa1"
+        }
+    },
+    "dependent_plugins": {}
+}

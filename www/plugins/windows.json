@@ -1,0 +1,36 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "package.appxmanifest": {
+                "parents": {
+                    "/Package/Capabilities": [
+                        {
+                            "xml": "<Capabilities><DeviceCapability><Device Id=\"any\"><Function Type=\"serviceId:1801\" /><Function Type=\"serviceId:1803\" /><Function Type=\"serviceId:1806\" /><Function Type=\"serviceId:1808\" /><Function Type=\"serviceId:180A\" /><Function Type=\"serviceId:180E\" /><Function Type=\"serviceId:1810\" /><Function Type=\"serviceId:1812\" /><Function Type=\"serviceId:1814\" /><Function Type=\"serviceId:1818\" /><Function Type=\"serviceId:181A\" /><Function Type=\"serviceId:181C\" /><Function Type=\"serviceId:181E\" /><Function Type=\"serviceId:1820\" /></Device></DeviceCapability><DeviceCapability Name=\"bluetooth.genericAttributeProfile\"><Device Id=\"any\"><Function Type=\"name:genericAccess\" /></Device></DeviceCapability></Capabilities>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<DeviceCapability Name=\"location\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-ble-central": {
+            "PACKAGE_NAME": "HeartRate"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "HeartRate"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "HeartRate"
+        }
+    },
+    "dependent_plugins": {}
+}
