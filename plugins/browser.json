@@ -1,0 +1,24 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-ble-central": {
+            "PACKAGE_NAME": "io.cordova.appb64ec64666e9432a9caf5f01009feb88"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "io.cordova.appb64ec64666e9432a9caf5f01009feb88"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "io.cordova.appb64ec64666e9432a9caf5f01009feb88"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.appb64ec64666e9432a9caf5f01009feb88"
+        }
+    },
+    "dependent_plugins": {}
+}

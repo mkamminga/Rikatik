@@ -1,0 +1,59 @@
+<!-- Session -->
+<div data-role="page" id="session">
+    <div data-role="header">
+        <h1>Session</h1>
+        <a href="home.html" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
+        <a href="#" data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" title="Terug"></a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2>Session</h2>
+        <a class="ui-btn ui-btn-inline" href="find.html" id="find-bluetooth-devices">Verbind met een hartslag meter</a>
+        
+        <div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+            <label class="ui-slider" id="flip-s-label" for="flip-s">Gps</label>
+            <select class="ui-slider-switch" name="gps" id="gps-flip" data-role="slider">
+                <option value="off">Uit</option>
+                <option value="on">Aan</option>
+            </select>
+        </div>
+
+        <div id="session-controls">
+            <button type="button" class="button" id="start-session-btn">Start</button>
+            <button type="button" class="button" id="stop-session-btn">Stop</button>
+        </div>
+        
+        <!-- Session run data-->
+        <div class="ui-body ui-body-a ui-corner-all" id="session-data-frame">
+            
+            <div id="heartbeat">
+                <div id="heart-pulse" class="pulse">&hearts;</div>
+                <div id="heartbeat-text">00</div>
+            </div>
+
+            <div id="gps-data">
+                <dl>
+                    <dt>Snelheid</dt> 
+                    <dd>
+                        <span class="ui-btn">
+                            <strong id="gps-data-speed">0.00</strong> 
+                            <i>km/h</i>
+                        </span>
+                    </dd>
+                    
+                    <dt>Afstand afgelegd</dt>
+                    <dd>
+                        <span class="ui-btn">
+                            <strong id="gps-data-distance">0.000</strong>
+                            <i>m</i>
+                        </span>
+                    </dd>
+                </dl>
+            </div>
+
+            <div style="clear: both;"></div>
+            
+            <span class="ui-btn ui-icon-clock ui-btn-icon-left ui-shadow ui-corner-all" id="timer">00:00:00</span>
+        </div>
+    </div><!-- /content -->
+</div><!-- /page -->

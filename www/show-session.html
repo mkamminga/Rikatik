@@ -1,0 +1,48 @@
+<!-- Show session -->
+<div data-role="page" id="show-session">
+    <div data-role="header">
+        <h1>Sessie</h1>
+        <a href="home.html" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
+        <a href="#" data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" title="Terug"></a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2>Sessie</h2>
+        <div id="session-item">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Algemeen</h3>
+                <hr />
+                <dl>
+                    <dt>Duur</dt>
+                    <dd><span from="session_time">&nbsp;</span></dd>
+
+                    <dt>Gemiddelde hartslag</dt>
+                    <dd><span from="avg_heart_rate">&nbsp;</span></dd>
+
+                    <dt>Hoogste hartslag</dt>
+                    <dd><span from="max_heart_rate">&nbsp;</span></dd>
+
+                    <dt>Laagste hartslag</dt>
+                    <dd><span from="min_heart_rate">&nbsp;</span></dd>
+                </dl>
+            </div>
+            
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Gps</h3>
+                <hr />
+                <dl>
+                    <dt>Gemeten afgelegde afstand</dt>
+                    <dd><span from="distance_traveled">&nbsp;</span> m</dd>
+
+                    <dt>Gemeten hoogste snelheid</dt>
+                    <dd><span from="max_speed">&nbsp;</span> km/u</dd>
+
+                    <dt>Gemeten gemiddelde snelheid</dt>
+                    <dd><span from="avg_speed">&nbsp;</span> km/u</dd>
+                </dl>
+            </div>
+            
+                <a data-direction="reverse" data-transition="pop" href="#" data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" title="Terug">Terug</a>
+            </div>
+    </div><!-- /content -->
+</div><!-- /page -->

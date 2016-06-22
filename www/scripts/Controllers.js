@@ -311,6 +311,7 @@ var controllers = {
         }
 
         function startSession () {
+            console.log("Start session btn");
             if (!scope.subscribed) {
                 toast("Niet verbonden met hartslagmeter!");
                 return;
@@ -477,37 +478,36 @@ var controllers = {
             if (!scope.bindingsInitialized) {
                 rootServices.eventManager.subscribe("SessionController.onLeave", onLeave);
                 scope.bindingsInitialized = true;
-
-                $("#start-session-btn").click(function () {
-                    startSession();
-                });
-
-                rootServices.eventManager.subscribe("SessionController.sessionStarterd", function () {
-                    $("#start-session-btn").hide();
-                    $("#stop-session-btn").show();
-                });
-
-                rootServices.eventManager.subscribe("SessionController.sessionStopped", function () {
-                    $("#start-session-btn").show();
-                    $("#stop-session-btn").hide();
-                });
-
-                $("#stop-session-btn").click(function () {
-                    stopSession();
-                });
-
-                $("#stop-session-btn").hide();
-
-                $("#gps-flip").on("change", function () {
-                    var val = $(this).val();
-                    if (val == "on") {
-                        //init gps
-                        initGps();
-                    } else {
-                        clearGps();
-                    }
-                });
             }
+            $("#start-session-btn").click(function () {
+                startSession();
+            });
+
+            rootServices.eventManager.subscribe("SessionController.sessionStarterd", function () {
+                $("#start-session-btn").hide();
+                $("#stop-session-btn").show();
+            });
+
+            rootServices.eventManager.subscribe("SessionController.sessionStopped", function () {
+                $("#start-session-btn").show();
+                $("#stop-session-btn").hide();
+            });
+
+            $("#stop-session-btn").click(function () {
+                stopSession();
+            });
+
+            $("#stop-session-btn").hide();
+
+            $("#gps-flip").on("change", function () {
+                var val = $(this).val();
+                if (val == "on") {
+                    //init gps
+                    initGps();
+                } else {
+                    clearGps();
+                }
+            });
         }
 
         function initHeartRate() {
@@ -623,17 +623,13 @@ var controllers = {
             $('input[name="heartRate.max"]').val(localStorage.getItem("heartRate.max"));
             $('input[name="heartRate.min"]').val(localStorage.getItem("heartRate.min"));
             $('#testmodus-flip').val(localStorage.getItem("testMode")).flipswitch("refresh");
+            $("#settings-form").submit(function (e) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                e.stopPropagation();
 
-            if (!scope.bindingsInitialized) {
-                
-                $("#settings-form").submit(function (e) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    e.stopPropagation();
-
-                    save();
-                });
-            }
+                save();
+            });
         }
 
         init();

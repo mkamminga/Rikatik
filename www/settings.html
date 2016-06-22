@@ -1,0 +1,34 @@
+<!-- Settings -->
+<div data-role="page" id="settings">
+    <div data-role="header">
+        <h1>Instellingen</h1>
+        <a href="#" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all" data-rel="back" title="Terug"></a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2>Instellingen</h2>
+        <p>Verander standaard instellingen</p>
+        <div id="setting-messages">
+            <!-- Placeholder for all the error or success messages -->
+        </div>
+        <form id="settings-form" action="" method="post" onsubmit="return false">
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="max-heartrate">Maximale hartslag:</label>
+                <input type="text" name="heartRate.max" id="max-heartrate" value="" placeholder="Maximale hartslag" />
+            </div>
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="min-heartrate">Minimale hartslag:</label>
+                <input type="text" name="heartRate.min" id="min-heartrate" value="" placeholder="Minimale hartslag" />
+            </div>
+            <div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+                <label class="ui-slider" id="flip-testmodus-label" for="testmodus-flip">Test modus</label>
+                <select class="ui-slider-switch" name="testMode" id="testmodus-flip" data-role="flipswitch">
+                    <option value="0">Uit</option>
+                    <option value="1">Aan</option>
+                </select>
+            </div>
+
+            <button type="submit" name="submit" value="true">Opslaan</button>
+        </form>
+    </div><!-- /content -->
+</div><!-- /page -->

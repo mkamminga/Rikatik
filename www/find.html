@@ -1,0 +1,24 @@
+<!-- Find bluetooth devices -->
+<div data-role="page" id="find-bluetooth-devices">
+    <div data-role="header">
+        <h1>Hartslag meter</h1>
+
+        <a href="home.html" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
+        <a href="#" data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" title="Terug"></a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2>Verbind met een apparaat</h2>
+        <div id="found-devices-frame">
+            <button class="ui-btn ui-btn-inline" id="start-scan-btn" type="button">Zoek</button>
+            <button class="ui-btn ui-btn-inline" id="stop-scan-btn" type="button">Stop</button>
+            
+            <div id="found-devices-container" class="ui-body ui-body-a ui-corner-all">
+                <p>Gevonden apparten</p>
+                <!-- found devices container-->
+            </div>
+        </div>
+
+        <div data-role="popup" id="heartrate-monitor-popup"></div>
+    </div><!-- /content -->
+</div><!-- /page -->

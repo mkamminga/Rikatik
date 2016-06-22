@@ -50,7 +50,7 @@
             "gotoPage": function gotoPage(page, args) {
                 pageArgs[page] = {};
                 pageArgs[page] = args;
-                $(":mobile-pagecontainer").pagecontainer("change", "#" + page, { role: "page" });
+                $(":mobile-pagecontainer").pagecontainer("change", page + ".html", { role: "page" });
             }
             
         };
@@ -91,7 +91,7 @@
             switchController($(data.toPage).attr('id'));
         });
         //open the default page
-        switchController("home");
+        rootServices.gotoPage("home");
     }
 
     function onPause() {

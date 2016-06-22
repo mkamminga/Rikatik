@@ -1,0 +1,30 @@
+<!-- Register -->
+<div data-role="page" id="register">
+    <div data-role="header">
+        <h1>Register</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2>Register</h2>
+        <p>Register so that you can use the Rikatik app!</p>
+        <div id="register-messages">
+            <!-- Placeholder for all the error or success messages -->
+        </div>
+        <form id="register-form" action="" method="post" onsubmit="return false">
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="username">Email:</label>
+                <input type="text" name="email" id="email" value="" placeholder="Email" />
+            </div>
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" value="" placeholder="Username" />
+            </div>
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" value="" placeholder="password" />
+            </div>
+
+            <button type="submit" name="submit" value="true">Register</button> 
+        </form>
+    </div><!-- /content -->
+</div><!-- /page -->

@@ -1,0 +1,32 @@
+<!-- Sessions overview -->
+<div data-role="page" id="sessions">
+    <div data-role="header">
+        <h1>Sessies</h1>
+        
+        <a href="#home" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
+        <a href="session.html" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all"></a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2>Opgeslagen sessies</h2>
+        <div id="sessions-overview"><!-- Sessions placeholder -->
+            <button class="ui-btn ui-icon-refresh ui-btn-icon-right ui-shadow ui-corner-allui-btn ui-btn-icon-notext ui-corner-all" id="session-overview-refresh-btn"></button>
+            <table id="sessions-overview-table">
+                <thead>
+                    <tr>
+                        <th data-priority="1">Datum</th>
+                        <th data-priority="2">Lengte</th>
+                        <th>Actie</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Dynamicly loaded items-->
+                </tbody>
+            </table>
+
+            <a href="session.html" class="ui-btn ui-icon-plus ui-btn-icon-left">Start een nieuwe sessie</a>
+        </div> 
+
+    </div><!-- /content -->
+</div><!-- /page -->
