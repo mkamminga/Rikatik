@@ -24,6 +24,7 @@ var controllers = {
         }
         function startScan () {
             console.log("Starting scan");
+            toast("Begonnen met scannen!");
             ble.startScan([], scanSuccess, scanError);
             
             setTimeout(stopScan,
@@ -34,9 +35,7 @@ var controllers = {
         }
 
         function scanSuccess(data) {
-            if (!data.name) {
-                return;
-            }
+            toast("Nieuw apparaat gevonden!");
             var index = scope.services.length;
             scope.services.push(data);
             $("#found-devices-container").append("<span class=\"ui-btn device\" data-index=\""+ index +"\">" + data.name + "</span>");
@@ -239,7 +238,7 @@ var controllers = {
                 //alert user if heart rate either more or less than the set bounds
                 if (heartRateData[1] > parseInt(localStorage.getItem("heartRate.max")) 
                 || heartRateData[1] < parseInt(localStorage.getItem("heartRate.min"))) {
-                    navigator.vibrate([200, 200, 200]);
+                    navigator.vibrate(500);
                 }
             }
         }
